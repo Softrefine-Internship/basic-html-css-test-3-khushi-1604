@@ -65,9 +65,9 @@
   position: absolute;
   width: 210px;
   height: 80px;
-  top: 150px;
+  top: 130px;
   right: 190px;
-  padding: 25px;
+  padding: 21px;
   display: grid;
   grid-template-columns: 80px 120px;
 }

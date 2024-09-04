@@ -82,7 +82,7 @@
 
 .second-half {
   background-color: #fefefe;
-  height: 750px;
+  height: 850px;
   display: grid;
   grid-template-columns: 25% 75%;
 }
@@ -172,22 +172,7 @@
   margin-bottom: 5px;
   margin-top: 10px;
 }
-.rightwala {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 50px;
-}
-.box--3 {
-  background-color: #fca424;
-  margin: 10px;
-  height: 50px;
-  width: 100%;
-}
-.long-box {
-  background-color: blueviolet;
-  height: 50px;
-  width: 100%;
-}
+
 .right-side {
   display: flex;
   flex-direction: row;
@@ -225,10 +210,92 @@
 .box--3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 .boxs {
-  background-color: #cdcdcd;
-  height: 120px;
-  width: 250px;
+  background-color: #fefefe;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 105px;
+  width: 260px;
+}
+.big-num {
+  font-size: 52px;
+  text-align: center;
+  margin: 20px;
+  border-right: 1px solid #cdcdcd;
+  padding-right: 10px;
+}
+
+.inner--2 p {
+  font-size: 15px;
+}
+.inner--2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: #cdcdcd;
+  text-align: left;
+  width: 100px;
+  margin: 25px 5px;
+}
+.claim-img {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  margin-left: -1.2rem;
+  border: 0.3rem solid #fff;
+}
+
+.claim-img:first-child {
+  margin-left: 0;
+}
+
+.claim-imgs {
+  display: flex;
+  height: 10px;
+}
+.claim-img {
+  height: 30px;
+  width: 30px;
+}
+
+.long-box {
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 560px;
+}
+.longy {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
+  gap: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 18px;
+}
+.large {
+  font-size: 22px;
+  color: black;
+  margin-bottom: 15px;
+}
+.longy img {
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+  border-radius: 21px;
+}
+.long-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px 0;
+  color: #cdcdcdbe;
+}
+.pay {
+  height: 20px;
+  font-size: 15px;
+  width: 50px;
+  background-color: #fca424;
+  padding: 10px;
+  margin-top: 120px;
 }

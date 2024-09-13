@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-weight: 600;
+  border-radius: 2px;
 }
 .main-container {
   background-color: rgba(226, 226, 164, 0.619);
   padding: 50px 150px;
+  box-shadow: rgba(72, 72, 79, 0.2) 20px 15px 60px 10px;
 }
 .first-half {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -45,9 +48,12 @@
   font-size: 22px;
 }
 .btn {
-  font-size: 10px;
+  font-size: 9.5px;
   border: 1px solid #cdcdcd;
   padding: 5px 10px 5px;
+}
+.btn:hover {
+  cursor: pointer;
 }
 .top-right-bar {
   display: grid;
@@ -59,7 +65,16 @@
   top: 80px;
   right: 240px;
 }
-
+.yellow_dot {
+  position: absolute;
+  top: 1px;
+  right: -13px;
+  width: 4px;
+  height: 4px;
+  background-color: #fca424;
+  border-radius: 50%;
+  border: 2px solid #fca424;
+}
 .top-box {
   background-color: #fbfafaa5;
   position: absolute;
@@ -99,6 +114,9 @@
   margin-left: 30px;
   margin-top: 80px;
   font-size: 14px;
+}
+.aboutfam img {
+  object-fit: fill;
 }
 .famtitle {
   display: grid;
@@ -156,6 +174,14 @@
   margin-top: 30px;
   font-size: 14px;
 }
+.activity {
+  margin-left: -90px;
+  margin-top: 30px;
+  font-size: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 600px;
+}
 .metitle {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -190,6 +216,9 @@
   font-size: 14px;
   cursor: pointer;
 }
+.top-nav p:hover {
+  border-bottom: 2px solid #fca424;
+}
 .dash {
   display: flex;
   flex-direction: row;
@@ -217,7 +246,7 @@
 }
 .boxs {
   background-color: #fefefe;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 105px;
@@ -277,7 +306,7 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr 0.5fr;
   gap: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 18px;
 }
 .large {
@@ -303,7 +332,7 @@
   font-size: 15px;
   width: 50px;
   background-color: #fca424;
-  padding: 10px;
+  padding: 5px 10px;
   margin-top: 120px;
   cursor: pointer;
 }
@@ -329,4 +358,77 @@
 }
 .dark {
   color: #cdcdcd;
+}
+
+.circular-progress {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.mask,
+.fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip: rect(0, 70px, 70px, 35px); /* Clip for semi-circle */
+}
+
+.mask {
+  clip: rect(0, 35px, 70px, 0);
+}
+
+.full {
+  transform: rotate(180deg);
+}
+
+.fill {
+  background-color: lightgray;
+  clip: rect(0, 35px, 70px, 0); /* Rotate for the orange fill */
+}
+
+.full .fill {
+  transform: rotate(270deg); /* This covers 75% of the circle */
+}
+
+.half .fill {
+  clip: rect(0, 35px, 70px, 35px); /* Adjust for the remaining portion */
+}
+
+.fix {
+  background-color: orange;
+  transform: rotate(135deg); /* Fix overlap in progress */
+}
+
+.inside-circle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.connecting-line {
+  height: 530px;
+  position: absolute;
+  width: 0.4px;
+  margin: 15px 0 0 6px;
+  color: #837d7594;
 }

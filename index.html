@@ -33,18 +33,24 @@
             name="notifications-outline"
             style="color: #cdcdcd; font-size: 20px"
           ></ion-icon>
-          <img src="img/girl.jpg" style="height: 20px; border-radius: 2px" />
+              <div class="yellow_dot"></div>
+          <img src="img/girl.jpg" style="height: 20px; border-radius: 2px; object-fit: fill;" />
         </div>
         <div class="topper-box">
           <div class="top-box">
-            <img
-              src="img/piechart.webp"
-              style="
-                width: 70px;
-                filter: sepia(100%) hue-rotate(-20deg) saturate(500%)
-                  brightness(110%);
-              "
-            />
+            <div class="circular-progress">
+              <div class="circle">
+                <div class="mask full">
+                  <div class="fill"></div>
+                </div>
+                <div class="mask half">
+                  <div class="fill"></div>
+                  <div class="fill fix"></div>
+                </div>
+                <div class="inside-circle">75%</div>
+              </div>
+            </div>
+            
             <div class="inside-box">
               <p style="font-size: 14px; color: #fefefe">Profile Completion</p>
               <p style="font-size: 10px; color: #cdcdcd">
@@ -192,9 +198,9 @@
                   <img src="img/cust1.jpeg">
                   <div class="long-row">
                     <p class="large">Khushi Shukla</p>
-                    <p><ion-icon name="browsers-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Field</span> : Thus,6/9/24 </p>
-                    <p><ion-icon name="calendar-number-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Due</span> : Wed,10/7/26 </p>
-                    <p><ion-icon name="location-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Address</span> : Willongsson hall </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="browsers-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Field</span> : Thus,6/9/24 </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="calendar-number-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Due</span> : Wed,10/7/26 </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="location-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Address</span> : Willongsson hall </p>
                   </div>
                   <p class="pay"><ion-icon name="pricetag-outline"></ion-icon> PAY</p>
                 </div>
@@ -203,9 +209,9 @@
                   <img src="img/cust5.jpg">
                   <div class="long-row">
                     <p class="large">Rudra Shukla</p>
-                    <p><ion-icon name="browsers-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Field</span> : Thus,6/9/24 </p>
-                    <p><ion-icon name="calendar-number-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Due</span> : Wed,10/7/26 </p>
-                    <p><ion-icon name="location-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Address</span> : Willongsson hall </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="browsers-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Field</span> : Thus,6/9/24 </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="calendar-number-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Due</span> : Wed,10/7/26 </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="location-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Address</span> : Willongsson hall </p>
                   </div>
                   <p class="pay"><ion-icon name="pricetag-outline"></ion-icon> PAY</p>
                 </div>
@@ -214,20 +220,21 @@
                   <img src="img/cust3.webp">
                   <div class="long-row">
                     <p class="large">Bhavu Shukla</p>
-                    <p><ion-icon name="browsers-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Field</span> : Thus,6/9/24 </p>
-                    <p><ion-icon name="calendar-number-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Due</span> : Wed,10/7/26 </p>
-                    <p><ion-icon name="location-outline"></ion-icon>&nbsp <span style="color: #cdcdcd;">Address</span> : Willongsson hall </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="browsers-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Field</span> : Thus,6/9/24 </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="calendar-number-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Due</span> : Wed,10/7/26 </p>
+                    <p style="color: #a4a2a2a7;"><ion-icon name="location-outline"></ion-icon>&nbsp <span style="color: #0b0b0b;">Address</span> : Willongsson hall </p>
                   </div>
                   <p class="pay"><ion-icon name="pricetag-outline"></ion-icon> PAY</p>
                 </div>
               </div>
 
-
-              <div class="aboutme">
+              <div class="activity">
                 <div class="metitle">
                   <p>ACTIVITY</p>
                 </div>
-                <div class="lines"></div>
+                <div class="lines">
+                  <hr class="connecting-line">
+                </div>
                 <div class="actdetail">
                   <ion-icon name="ellipse" class="icon" style="color: blue; "></ion-icon>
                   <div class="acts">
@@ -247,6 +254,25 @@
                 </div>
 
                 <div class="actdetail">
+                  <ion-icon name="ellipse" class="icon" style="color: rgb(255, 111, 0);"></ion-icon>
+                  <div class="acts">
+                    <p>120 new members</p>
+                    <p class="dark">23 members of CDS are got claimed in dc</p>
+                    <p class="light">05 : 40 pm</p>
+                  </div> 
+                </div>
+                
+                <div class="actdetail">
+                  <ion-icon name="ellipse" class="icon" style="color: rgb(55, 255, 0);"></ion-icon>
+                  <div class="acts">
+                    <p>120 new members</p>
+                    <p class="dark">23 members of CDS are got claimed in dc</p>
+                    <p class="light">05 : 40 pm</p>
+                  </div> 
+                </div>
+
+
+                <div class="actdetail">
                   <ion-icon name="ellipse" class="icon" style="color: green;"></ion-icon>
                   <div class="acts">
                     <p>3 claims are waiting</p>
@@ -257,6 +283,24 @@
 
                 <div class="actdetail">
                   <ion-icon name="ellipse" class="icon" style="color: blue;"></ion-icon>
+                  <div class="acts">
+                    <p>120 new members</p>
+                    <p class="dark">23 members of CDS are got claimed in dc</p>
+                    <p class="light">05 : 40 pm</p>
+                  </div> 
+                </div>
+
+                <div class="actdetail">
+                  <ion-icon name="ellipse" class="icon" style="color: rgb(0, 229, 255);"></ion-icon>
+                  <div class="acts">
+                    <p>120 new members</p>
+                    <p class="dark">23 members of CDS are got claimed in dc</p>
+                    <p class="light">05 : 40 pm</p>
+                  </div> 
+                </div>
+                
+                <div class="actdetail">
+                  <ion-icon name="ellipse" class="icon" style="color: rgb(223, 17, 219);"></ion-icon>
                   <div class="acts">
                     <p>120 new members</p>
                     <p class="dark">23 members of CDS are got claimed in dc</p>

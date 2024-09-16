@@ -1,9 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   font-weight: 600;
   border-radius: 2px;
+}
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+img {
+  cursor: pointer;
+  object-fit: cover;
 }
 .main-container {
   background-color: rgba(226, 226, 164, 0.619);
@@ -54,6 +62,7 @@
 }
 .btn:hover {
   cursor: pointer;
+  background-color: rgb(238, 144, 144);
 }
 .top-right-bar {
   display: grid;
@@ -79,7 +88,7 @@
   background-color: #fbfafaa5;
   position: absolute;
   width: 210px;
-  height: 80px;
+  height: 60px;
   top: 130px;
   right: 190px;
   padding: 21px;
@@ -95,7 +104,10 @@
   width: 80px;
   cursor: pointer;
 }
-
+.com-btn:hover {
+  background-color: #0da8d3;
+  color: #1a1a1a;
+}
 .second-half {
   background-color: #fefefe;
   height: 850px;
@@ -174,13 +186,33 @@
   margin-top: 30px;
   font-size: 14px;
 }
+
 .activity {
+  padding: 15px 10px 0 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-left: -90px;
   margin-top: 30px;
   font-size: 14px;
   overflow-y: auto;
   overflow-x: hidden;
   height: 600px;
+  transition: all 0.2s ease-in;
+  scrollbar-color: orange #fefefe;
+  scroll-behavior: smooth; /* Adds smooth scrolling */
+}
+.activity::-webkit-scrollbar {
+  width: 5px; /* width of the scrollbar */
+}
+
+.activity::-webkit-scrollbar-thumb {
+  background-color: orange; /* Scrollbar thumb color */
+  border-radius: 10px;
+  height: 10px; /* This visually reduces the thumb size */
+}
+
+.activity::-webkit-scrollbar-track {
+  background-color: white; /* Scrollbar 
+  track */
 }
 .metitle {
   display: grid;
@@ -217,6 +249,7 @@
   cursor: pointer;
 }
 .top-nav p:hover {
+  color: #1a1a1a;
   border-bottom: 2px solid #fca424;
 }
 .dash {
@@ -238,7 +271,10 @@
   border-radius: 2px;
   cursor: pointer;
 }
-
+.claimbtn:hover {
+  background-color: #b7e3d8;
+  transform: translate3d(-5px, -8px, -2px);
+}
 .box--3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -309,6 +345,11 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 18px;
 }
+.longy:hover {
+  background-color: #d9e4e1e2;
+  transform: translate3d(-5px, 2px, 5px);
+  cursor: pointer;
+}
 .large {
   font-size: 22px;
   color: black;
@@ -335,6 +376,11 @@
   padding: 5px 10px;
   margin-top: 120px;
   cursor: pointer;
+}
+.pay:hover {
+  color: #1a1a1a;
+  background-color: #fca62463;
+  transform: translate(2px, 8px);
 }
 .lines {
   width: 70%;

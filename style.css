@@ -216,7 +216,7 @@ img {
   font-size: 14px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 480px;
+  height: 450px;
   transition: all 0.2s ease-in;
   scrollbar-color: orange #fefefe;
   scroll-behavior: smooth; /* Adds smooth scrolling */
@@ -296,35 +296,26 @@ img {
   gap: 1.5rem;
   height: 38rem;
   overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .client-act-history::-webkit-scrollbar {
-  width: 12px;
+  width: 2px; /* Set scrollbar width */
 }
 
 .client-act-history::-webkit-scrollbar-track {
-  background: white;
-  border-radius: 3px;
+  background: transparent; /* Transparent background */
 }
 
 .client-act-history::-webkit-scrollbar-thumb {
-  background-color: #fca424;
-  border-radius: 1rem;
-  border: 2px solid white;
+  background-color: #fca424; /* Color of the scrollbar thumb */
+  border-radius: 1rem; /* Rounded corners */
+  border: 2px solid transparent; /* Transparent border to ensure no extra elements */
 }
 
 .client-act-history::-webkit-scrollbar-thumb:hover {
-  background-color: #e6951c;
-}
-
-.client-act-history::before {
-  content: "";
-  height: 36rem;
-  width: 0.1rem;
-  top: 7.7rem;
-  left: 2.1rem;
-  background-color: #cdcdcd;
-  position: absolute;
+  background-color: #e6951c; /* Color when hovering */
 }
 
 .light {
@@ -465,7 +456,7 @@ img {
   border: 0.3rem solid #fff;
 }
 
-.claim-img:first-child {
+.claim-imgs:first-child {
   margin-left: 0;
 }
 
@@ -476,6 +467,25 @@ img {
 .claim-img {
   height: 30px;
   width: 30px;
+}
+.claim-imgs:last-child {
+  position: relative; /* Ensures the pseudo-element is positioned relative to this container */
+}
+
+.claim-imgs:last-child::after {
+  content: "+32";
+  position: absolute; /* Ensure the pseudo-element is absolutely positioned */
+  top: 2px;
+  right: 11px;
+  height: 31px;
+  width: 31px;
+  border-radius: 50%;
+  background: rgba(13, 211, 158, 0.67); /* Light background */
+  color: white;
+  display: grid;
+  place-items: center; /* Center the content */
+  font-size: 0.8rem;
+  z-index: 1; /* Ensure it's layered above the image */
 }
 
 .long--2 {
@@ -503,7 +513,7 @@ img {
   transition-timing-function: ease-in;
   transition-delay: 0s;
   transition-property: all;
-  transform: scale(1.1);
+  transform: scale(1.03);
   cursor: pointer;
 }
 .large {
@@ -538,72 +548,35 @@ img {
   background-color: #fca62463;
   scale: 1;
 }
-
-.circular-progress {
-  position: relative;
+.progress-circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: orange;
-}
-
-.circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: orange;
-}
-
-.mask,
-.fill {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  clip: rect(0, 70px, 70px, 35px); /* Clip for semi-circle */
-}
-
-.mask {
-  clip: rect(0, 35px, 70px, 0);
-}
-
-.full {
-  transform: rotate(180deg);
-}
-
-.fill {
-  background-color: lightgray;
-  clip: rect(0, 35px, 70px, 0); /* Rotate for the orange fill */
-}
-
-.full .fill {
-  transform: rotate(270deg); /* This covers 75% of the circle */
-}
-
-.half .fill {
-  clip: rect(0, 35px, 70px, 35px); /* Adjust for the remaining portion */
-}
-
-.fix {
-  background-color: orange;
-  transform: rotate(135deg); /* Fix overlap in progress */
-}
-
-.inside-circle {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  background-color: white;
-  top: 10%;
-  left: 10%;
+  background-color: rgba(255, 255, 255, 0.292);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-weight: bold;
+  position: relative;
 }
+
+.border-progress {
+  width: 68px;
+  height: 69px;
+  border: 5px solid orange;
+  border-radius: 80%;
+  position: absolute;
+  top: 16.3px;
+  left: 6.8%;
+  border-top-color: rgb(169, 169, 169);
+  rotate: 45deg;
+}
+.progress-text {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fefefe;
+}
+
 .connecting-line {
   height: 360px;
   position: absolute;

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-weight: 600;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 html {
   font-family: sans-serif;
@@ -30,6 +30,7 @@ img {
   position: absolute;
   top: 150px;
   left: 190px;
+  border-radius: 10px;
 }
 
 .top-text {
@@ -110,7 +111,7 @@ img {
 }
 .second-half {
   background-color: #fefefe;
-  height: 850px;
+  height: 770px;
   display: grid;
   grid-template-columns: 25% 75%;
 }
@@ -186,7 +187,13 @@ img {
   margin-top: 30px;
   font-size: 14px;
 }
-
+.metitle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 410px;
+  grid-row-gap: space-between;
+  overflow: hidden;
+}
 .activity {
   padding: 15px 10px 0 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -195,31 +202,27 @@ img {
   font-size: 14px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 600px;
+  height: 475px;
   transition: all 0.2s ease-in;
   scrollbar-color: orange #fefefe;
   scroll-behavior: smooth; /* Adds smooth scrolling */
+  margin-right: 30px;
 }
-.activity::-webkit-scrollbar {
+.actdetail::-webkit-scrollbar {
   width: 5px; /* width of the scrollbar */
 }
 
-.activity::-webkit-scrollbar-thumb {
+.actdetail::-webkit-scrollbar-thumb {
   background-color: orange; /* Scrollbar thumb color */
   border-radius: 10px;
   height: 10px; /* This visually reduces the thumb size */
 }
 
-.activity::-webkit-scrollbar-track {
+.actdetail::-webkit-scrollbar-track {
   background-color: white; /* Scrollbar 
   track */
 }
-.metitle {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 410px;
-  grid-row-gap: space-between;
-}
+
 .pair-2 {
   display: flex;
   flex-direction: column;
@@ -248,9 +251,25 @@ img {
   font-size: 14px;
   cursor: pointer;
 }
-.top-nav p:hover {
-  color: #1a1a1a;
-  border-bottom: 2px solid #fca424;
+.top-nav p {
+  position: relative;
+}
+.top-nav p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fca424; /* Border color */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: bottom right; /* Start scaling from the right */
+  transition: transform 0.5s ease-in-out; /* Animate the scale */
+}
+
+.top-nav p:hover::after {
+  transform: scaleX(1); /* Expand the border to full width */
+  transform-origin: bottom left; /* Scale to the left */
 }
 .dash {
   display: flex;
@@ -286,7 +305,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 105px;
-  width: 260px;
+  width: 270px;
+}
+.boxs:hover {
+  background-color: #c3e1d9dd;
+  transform: translate3d(-15px, -5px, 5px);
 }
 .big-num {
   font-size: 52px;
@@ -336,14 +359,15 @@ img {
   margin-top: 30px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+  height: 350px;
   width: 560px;
 }
 .longy {
   display: grid;
   grid-template-columns: 1fr 1.5fr 0.5fr;
-  gap: 10px;
+  gap: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 .longy:hover {
   background-color: #d9e4e1e2;
@@ -374,7 +398,7 @@ img {
   width: 50px;
   background-color: #fca424;
   padding: 5px 10px;
-  margin-top: 120px;
+  margin-top: 100px;
   cursor: pointer;
 }
 .pay:hover {
@@ -391,7 +415,7 @@ img {
 .actdetail {
   display: grid;
   grid-template-columns: 1fr 10fr;
-  width: 270px;
+  width: 180px;
   margin-bottom: 20px;
 }
 .acts {
@@ -472,7 +496,7 @@ img {
   font-weight: bold;
 }
 .connecting-line {
-  height: 530px;
+  height: 420px;
   position: absolute;
   width: 0.4px;
   margin: 15px 0 0 6px;

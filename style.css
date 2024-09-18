@@ -33,7 +33,7 @@ img {
   height: 200px;
   position: absolute;
   top: 150px;
-  left: 190px;
+  left: 195px;
   border-radius: 10px;
 }
 
@@ -216,7 +216,7 @@ img {
   font-size: 14px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 450px;
+  height: 470px;
   transition: all 0.2s ease-in;
   scrollbar-color: orange #fefefe;
   scroll-behavior: smooth; /* Adds smooth scrolling */
@@ -299,7 +299,9 @@ img {
   overflow-x: hidden;
   position: relative;
 }
-
+.client-act-history::-webkit-scrollbar-button {
+  display: none;
+}
 .client-act-history::-webkit-scrollbar {
   width: 2px; /* Set scrollbar width */
 }
@@ -312,6 +314,7 @@ img {
   background-color: #fca424; /* Color of the scrollbar thumb */
   border-radius: 1rem; /* Rounded corners */
   border: 2px solid transparent; /* Transparent border to ensure no extra elements */
+  min-height: 50px;
 }
 
 .client-act-history::-webkit-scrollbar-thumb:hover {
@@ -364,7 +367,7 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1.5px;
   width: 100%;
   height: 2px;
   background-color: #fca424; /* Border color */
@@ -534,6 +537,14 @@ img {
   color: #cdcdcdbe;
   font-size: 14px;
 }
+.two {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  align-items: center;
+}
 .pay {
   height: 20px;
   font-size: 15px;
@@ -578,9 +589,16 @@ img {
 }
 
 .connecting-line {
-  height: 360px;
-  position: absolute;
+  position: relative;
   width: 0.4px;
+  height: 130px;
   margin: 15px 0 0 6px;
   color: #837d7594;
+  margin-top: -20px;
+  margin-right: -20px;
+}
+.baju {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -30px;
 }
